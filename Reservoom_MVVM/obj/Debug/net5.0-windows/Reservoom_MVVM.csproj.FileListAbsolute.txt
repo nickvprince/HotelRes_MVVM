@@ -20,3 +20,9 @@ C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windo
 C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windows\ref\Reservoom_MVVM.dll
 C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windows\Reservoom_MVVM.pdb
 C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windows\Reservoom_MVVM.genruntimeconfig.cache
+C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windows\Views\MakeReservationView.g.cs
+C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windows\Views\ReservationListingView.g.cs
+C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windows\Views\MakeReservationView.baml
+C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windows\Views\ReservationListingView.baml
+C:\Users\nickv\source\repos\Reservoom_MVVM\Reservoom_MVVM\obj\Debug\net5.0-windows\App.baml
