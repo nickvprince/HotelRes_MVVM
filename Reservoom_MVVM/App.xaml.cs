@@ -40,7 +40,7 @@ namespace Reservoom_MVVM
 
 
 
-            IEnumerable<Reservation> reservations = hotel.GetReservationsForUser("nickvprince");
+            IEnumerable<Reservation> reservations = hotel.GetAllReservations();
 
             base.OnStartup(e);
         }

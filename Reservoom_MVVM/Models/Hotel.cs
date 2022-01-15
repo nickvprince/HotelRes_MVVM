@@ -19,13 +19,12 @@ namespace Reservoom_MVVM.Models
         }
 
         /// <summary>
-        /// Get the reservations for a user.
+        /// Get all reservations.
         /// </summary>
-        /// <param name="username">The username of the user.</param>
         /// <returns>The reservations for the user.</returns>
-        public IEnumerable<Reservation> GetReservationsForUser(string username)
+        public IEnumerable<Reservation> GetAllReservations()
         {
-            return _reservationBook.GetReservationsForUser(username);
+            return _reservationBook.GetAllReservations();
         }
 
         /// <summary>
