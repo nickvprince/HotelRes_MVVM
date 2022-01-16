@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reservoom_MVVM.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Reservoom_MVVM.ViewModels
     {
         public ViewModelBase CurrentViewModel { get; }
 
-        public MainViewModel()
+        public MainViewModel(Hotel hotel)
         {
             CurrentViewModel = new ReservationListingViewModel();
         }
