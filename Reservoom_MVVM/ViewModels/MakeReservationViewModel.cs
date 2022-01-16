@@ -84,10 +84,10 @@ namespace Reservoom_MVVM.ViewModels
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
 
-        public MakeReservationViewModel(Hotel hotel)
+        public MakeReservationViewModel(Hotel hotel, Stores.NavigationStore navigationStore, Func<ReservationListingViewModel> createReservationViewModel)
         {
             SubmitCommand = new MakeReservationCommand(this, hotel);
-            CancelCommand = new CancelMakeReservationCommand();
+            CancelCommand = new NavigateCommand(navigationStore, createReservationViewModel);
         }
 
     }

@@ -20,11 +20,11 @@ namespace Reservoom_MVVM.ViewModels
 
         public ICommand MakeReservationCommand { get; }
 
-        public ReservationListingViewModel(NavigationStore navigationStore)
+        public ReservationListingViewModel(NavigationStore navigationStore, Func<MakeReservationViewModel> createMakeReservationViewModel)
         {
             _reservations = new ObservableCollection<ReservationViewModel>();
 
-            MakeReservationCommand = new NavigateCommand(navigationStore);
+            MakeReservationCommand = new NavigateCommand(navigationStore, createMakeReservationViewModel);
 
             _reservations.Add(new ReservationViewModel(new Reservation(new RoomID(1, 2), "NicholasPrince", DateTime.Now, DateTime.Now)));
             _reservations.Add(new ReservationViewModel(new Reservation(new RoomID(3, 2), "IslamAhmed", DateTime.Now, DateTime.Now)));

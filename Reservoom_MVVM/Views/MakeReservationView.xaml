@@ -97,7 +97,7 @@
                     Command="{Binding SubmitCommand}" />
             <Button Margin="10,0,0,0" 
                     Content="Cancel" 
-                    Command="{Binding SubmitCommand}" />
+                    Command="{Binding CancelCommand}" />
         </StackPanel>
         
         
