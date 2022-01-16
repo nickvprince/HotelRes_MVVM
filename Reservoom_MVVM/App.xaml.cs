@@ -2,6 +2,7 @@
 using Reservoom_MVVM.Models;
 using Reservoom_MVVM.Stores;
 using Reservoom_MVVM.ViewModels;
+using Reservoom_MVVM.Services;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -43,12 +44,12 @@ namespace Reservoom_MVVM
 
         private MakeReservationViewModel CreateMakeReservationViewModel()
         {
-            return new MakeReservationViewModel(_hotel, _navigationStore, CreateReservationViewModel);
+            return new MakeReservationViewModel(_hotel, new NavigationService( _navigationStore, CreateReservationViewModel));
         }
 
         private ReservationListingViewModel CreateReservationViewModel()
         {
-            return new ReservationListingViewModel(_navigationStore, CreateMakeReservationViewModel);
+            return new ReservationListingViewModel(_hotel, new NavigationService(_navigationStore, CreateMakeReservationViewModel));
         }
     }
 }
