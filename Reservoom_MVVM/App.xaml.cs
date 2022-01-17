@@ -1,8 +1,8 @@
-﻿using Reservoom_MVVM.Exceptions;
-using Reservoom_MVVM.Models;
-using Reservoom_MVVM.Stores;
-using Reservoom_MVVM.ViewModels;
-using Reservoom_MVVM.Services;
+﻿using HotelRes_MVVM.Exceptions;
+using HotelRes_MVVM.Models;
+using HotelRes_MVVM.Stores;
+using HotelRes_MVVM.ViewModels;
+using HotelRes_MVVM.Services;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Reservoom_MVVM
+namespace HotelRes_MVVM
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -1,7 +1,7 @@
-﻿using Reservoom_MVVM.Exceptions;
-using Reservoom_MVVM.Models;
-using Reservoom_MVVM.Services;
-using Reservoom_MVVM.ViewModels;
+﻿using HotelRes_MVVM.Exceptions;
+using HotelRes_MVVM.Models;
+using HotelRes_MVVM.Services;
+using HotelRes_MVVM.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Reservoom_MVVM.Commands
+namespace HotelRes_MVVM.Commands
 {
     public class MakeReservationCommand : CommandBase
     {

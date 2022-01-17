@@ -1,11 +1,11 @@
-﻿using Reservoom_MVVM.Models;
+﻿using HotelRes_MVVM.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reservoom_MVVM.Exceptions
+namespace HotelRes_MVVM.Exceptions
 {
     class ReservationConflictException : Exception 
     { 

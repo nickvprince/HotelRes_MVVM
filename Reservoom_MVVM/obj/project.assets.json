@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nickv\\source\\repos\\Reservoom_MVVM\\Reservoom_MVVM\\Reservoom_MVVM.csproj",
-      "projectName": "Reservoom_MVVM",
-      "projectPath": "C:\\Users\\nickv\\source\\repos\\Reservoom_MVVM\\Reservoom_MVVM\\Reservoom_MVVM.csproj",
+      "projectUniqueName": "C:\\Users\\nickv\\source\\repos\\Reservoom_MVVM\\Reservoom_MVVM\\HotelRes_MVVM.csproj",
+      "projectName": "HotelRes_MVVM",
+      "projectPath": "C:\\Users\\nickv\\source\\repos\\Reservoom_MVVM\\Reservoom_MVVM\\HotelRes_MVVM.csproj",
       "packagesPath": "C:\\Users\\nickv\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\nickv\\source\\repos\\Reservoom_MVVM\\Reservoom_MVVM\\obj\\",
       "projectStyle": "PackageReference",

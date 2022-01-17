@@ -1,7 +1,7 @@
-﻿<Application x:Class="Reservoom_MVVM.App"
+﻿<Application x:Class="HotelRes_MVVM.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Reservoom_MVVM">
+             xmlns:local="clr-namespace:HotelRes_MVVM">
     <Application.Resources>
         <Style TargetType="Button">
             <Setter Property="Padding" Value="10 5" />

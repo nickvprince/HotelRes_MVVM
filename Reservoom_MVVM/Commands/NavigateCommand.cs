@@ -1,6 +1,6 @@
-﻿using Reservoom_MVVM.Services;
-using Reservoom_MVVM.Stores;
-using Reservoom_MVVM.ViewModels;
+﻿using HotelRes_MVVM.Services;
+using HotelRes_MVVM.Stores;
+using HotelRes_MVVM.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Reservoom_MVVM.Commands
+namespace HotelRes_MVVM.Commands
 {
     public class NavigateCommand : CommandBase
     {

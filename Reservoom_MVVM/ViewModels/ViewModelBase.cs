@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reservoom_MVVM.ViewModels
+namespace HotelRes_MVVM.ViewModels
 {
     public class ViewModelBase : INotifyPropertyChanged
     {

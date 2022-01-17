@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Reservoom_MVVM
+namespace HotelRes_MVVM
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

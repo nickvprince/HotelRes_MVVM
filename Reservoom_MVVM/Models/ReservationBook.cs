@@ -1,11 +1,11 @@
-﻿using Reservoom_MVVM.Exceptions;
+﻿using HotelRes_MVVM.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Reservoom_MVVM.Models
+namespace HotelRes_MVVM.Models
 {
     public class ReservationBook
     {

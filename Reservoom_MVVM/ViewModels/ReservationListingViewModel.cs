@@ -1,6 +1,6 @@
-﻿using Reservoom_MVVM.Commands;
-using Reservoom_MVVM.Models;
-using Reservoom_MVVM.Stores;
+﻿using HotelRes_MVVM.Commands;
+using HotelRes_MVVM.Models;
+using HotelRes_MVVM.Stores;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Reservoom_MVVM.ViewModels
+namespace HotelRes_MVVM.ViewModels
 {
     public class ReservationListingViewModel : ViewModelBase
     {

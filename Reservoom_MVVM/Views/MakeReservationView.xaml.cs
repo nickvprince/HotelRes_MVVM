@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Reservoom_MVVM.Views
+namespace HotelRes_MVVM.Views
 {
     /// <summary>
     /// Interaction logic for MakeReservationView.xaml
