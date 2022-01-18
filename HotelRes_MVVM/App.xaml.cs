@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.EntityFrameworkCore;
 using HotelRes_MVVM.DbContexts;
+using HotelRes_MVVM.Services.ReservationProviders;
+using HotelRes_MVVM.Services.ReservationCreators;
+using HotelRes_MVVM.Services.ReservationConflictCheckers;
 
 namespace HotelRes_MVVM
 {
@@ -21,19 +24,29 @@ namespace HotelRes_MVVM
     public partial class App : Application
     {
         private const string CONNECTION_STRING = "Data Source=HotelRes.db";
+
         private readonly Hotel _hotel;
         private readonly NavigationStore _navigationStore;
+        private readonly HotelResDbContextFactory _hotelResDbContextFactory;
          
         public App()
         {
-            _hotel = new Hotel("Prince Resorts");
+            _hotelResDbContextFactory = new HotelResDbContextFactory(CONNECTION_STRING);
+
+            IReservationProvider reservationProvider = new DatabaseReservationProvider(_hotelResDbContextFactory);
+            IReservationCreator reservationCreator = new DatabaseReservationCreator(_hotelResDbContextFactory);
+            IReservationConflictChecker reservationConflictChecker = new DatabaseReservationConflictChecker(_hotelResDbContextFactory);
+
+            ReservationBook reservationBook = new ReservationBook(reservationProvider, reservationCreator, reservationConflictChecker);
+
+            _hotel = new Hotel("Prince Resorts", reservationBook);
             _navigationStore = new NavigationStore();
         }
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            DbContextOptions options = new DbContextOptionsBuilder().UseSqlite(CONNECTION_STRING).Options;
-            using (HotelResDbContext dbContext = new HotelResDbContext(options))
+            
+            using (HotelResDbContext dbContext = _hotelResDbContextFactory.CreateDbContext())
             {
                 dbContext.Database.Migrate();
             }
@@ -56,7 +69,7 @@ namespace HotelRes_MVVM
 
         private ReservationListingViewModel CreateReservationViewModel()
         {
-            return new ReservationListingViewModel(_hotel, new NavigationService(_navigationStore, CreateMakeReservationViewModel));
+            return ReservationListingViewModel.LoadViewModel(_hotel, new NavigationService(_navigationStore, CreateMakeReservationViewModel));
         }
     }
 }

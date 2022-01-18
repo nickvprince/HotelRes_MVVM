@@ -16,10 +16,11 @@ namespace HotelRes_MVVM.Models
         private readonly IReservationCreator _reservationCreator;
         private readonly IReservationConflictChecker _reservationConflictChecker;
         
-        public ReservationBook(IReservationProvider reservationProvider, IReservationCreator reservationCreator)
+        public ReservationBook(IReservationProvider reservationProvider, IReservationCreator reservationCreator, IReservationConflictChecker reservationConflictChecker)
         {
             _reservationProvider = reservationProvider;
             _reservationCreator = reservationCreator;
+            _reservationConflictChecker = reservationConflictChecker;
         }
 
         /// <summary>
