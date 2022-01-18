@@ -33,9 +33,10 @@ namespace HotelRes_MVVM
         protected override void OnStartup(StartupEventArgs e)
         {
             DbContextOptions options = new DbContextOptionsBuilder().UseSqlite(CONNECTION_STRING).Options;
-            HotelResDbContext dbContext = new HotelResDbContext(options);
-
-            dbContext.Database.Migrate();
+            using (HotelResDbContext dbContext = new HotelResDbContext(options))
+            {
+                dbContext.Database.Migrate();
+            }
 
             _navigationStore.CurrentViewModel = CreateReservationViewModel();
 
