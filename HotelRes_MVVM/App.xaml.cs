@@ -10,6 +10,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.EntityFrameworkCore;
+using HotelRes_MVVM.DbContexts;
 
 namespace HotelRes_MVVM
 {
@@ -18,7 +20,7 @@ namespace HotelRes_MVVM
     /// </summary>
     public partial class App : Application
     {
-
+        private const string CONNECTION_STRING = "Data Source=HotelRes.db";
         private readonly Hotel _hotel;
         private readonly NavigationStore _navigationStore;
          
@@ -30,6 +32,10 @@ namespace HotelRes_MVVM
 
         protected override void OnStartup(StartupEventArgs e)
         {
+            DbContextOptions options = new DbContextOptionsBuilder().UseSqlite(CONNECTION_STRING).Options;
+            HotelResDbContext dbContext = new HotelResDbContext(options);
+
+            dbContext.Database.Migrate();
 
             _navigationStore.CurrentViewModel = CreateReservationViewModel();
 
